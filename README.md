@@ -23,10 +23,10 @@ Open index.html in the browser of your choice.
 September 27, 2024
 
 ## Credits
-Jashan Kumar
-Izel Esteban Cardenas Ramos
-Milana Gabbassova
-Sydney Bandarra
+* Jashan Kumar
+* Izel Esteban Cardenas Ramos
+* Milana Gabbassova
+* Sydney Bandarra
 
 
 ## License
