@@ -800,3 +800,155 @@
     text-align: right;
     margin-bottom: 30px;
 }
+
+/*MEET THE DEVELOPERS*/
+
+.section-developers {
+    padding: 120px 0px;
+    margin-bottom: 50px;
+    background-color: #EEEEEE;
+}
+
+.black-text-developers {
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+
+.basic-text-developers-top {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+
+.basic-text-developers-bottom {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.developers-btn {
+    width: 390px;
+    height: 80px;
+    background-color: #E2231A;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    border: none;
+}
+
+.developers-icons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.developers-desktop-picture, .developers-btn {
+    display: none;
+}
+
+/*PORTFOLIOS SECTION*/
+
+.section-portfolios {
+    margin-bottom: 50px;
+}
+
+.portfolio-title {
+    font-size: 26px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#portfolioContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 170px);
+    justify-content: center;
+    gap: 20px;
+}
+
+.portfolio-container {
+    width: 157px;
+    height: 180px;
+    border-radius: 25px;
+    background-color: #E3E3E3;
+    box-shadow: inset 0px 10px 6px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-image {
+    width: 155px;
+    height: 125px;
+    padding: 10px 20px;
+}
+
+.portfolio-info {
+    color: white;
+    background: linear-gradient(to bottom, #FF0939, #DE0C2D, #961414);
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 0px 0px 25px 25px;
+    margin-top: 5px;
+}
+
+.portfolio-link {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Footer styling */
+ footer {
+    background: linear-gradient(to right, #FF0939, #961414, #660D0D);
+    color: white;
+    padding: 20px;
+    /* margin: 20px; */
+ }
+
+ .logo-footer {
+    text-align: center;
+    margin-bottom: 15px;
+ }
+
+.footer-links1 {
+    margin-top: 20px;
+}
+
+.logo-footer a{
+    text-decoration: none;
+    color: white;
+ }
+ 
+.footer-links1 a, .footer-links2 a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.copyright-links {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-links-mobile a{
+    margin-right: 20px;
+}
+
+.social-links-desk{
+    display: none;
+}
