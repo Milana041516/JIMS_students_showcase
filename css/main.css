@@ -953,7 +953,6 @@
     display: none;
 }
 
-
 @media screen and (min-width: 768px) {
     .separator {
         position: absolute;
@@ -1840,6 +1839,8 @@
 
 }
 
+
+ 
 @media screen and (min-width: 1200px) {
     /*header*/
     
@@ -2780,3 +2781,21 @@ footer {
 }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
