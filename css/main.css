@@ -539,3 +539,264 @@
     max-width: 60%; 
     max-height: 100%;
 }
+
+/*PROJECT EXHIBIT SECTION*/
+
+.section-project-exhibit {
+    margin-bottom: 50px;
+}
+
+.section-project-exhibit div img {
+    width: 100%;    
+    height: 100%; 
+    object-fit: cover;
+    border-radius: inherit; 
+    border-radius: 20px;
+}
+
+.title-pe {
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.title-pe::before, 
+.title-pe::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 65%; 
+    height: 1px; 
+    background-color: black;
+    border-radius: 10px;
+}
+
+.title-pe::before {
+    top: 0;
+    left: 100px;
+}
+
+.title-pe::after {
+    bottom: 0;
+    right: 100px;
+}
+
+.img3-pe {
+    height: 183px;
+    border-radius: 20px;
+}
+
+.img6-pe {
+    display: none;
+}
+
+/*TESTIMONIALS*/
+
+/* .testimonial-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-left: 20px;
+    gap: 90px;
+    max-height: 700px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+} */
+
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(6, 380px); 
+    gap: 20px; 
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    padding-bottom: 10px; 
+    scroll-snap-type: x mandatory; 
+}
+
+.testimonial-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.testimonial-title::before,
+.testimonial-title::after {
+  content: '"';
+  font-size: 54px;
+  color: #c00;
+}
+
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #910015;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.testimonial-title {
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.testimonial-img {
+    width: 158px;
+    height: 158px;
+    margin: 0 auto;
+}
+
+
+.testimonial-text {
+    font-size: 20px;
+    color: #1D1D1D;
+    margin-bottom: 30px;
+    padding: 30px 0px 0px 0px;
+}
+
+.testimonial-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #E2231A;
+}
+
+.testimonial-occupation {
+    font-size: 20px;
+    font-weight: bold;
+    color: #7D7D7D;
+}
+
+/*INTERACTIVE MEDIA DESIGN SECTION*/
+
+.section-idp {
+    margin-bottom: 50px;
+}
+
+.idp-title-m {
+    color: #000000;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.idp-title-d {
+    display: none;
+}
+
+.ipd-picture {
+    width: 100%;
+    height: 200px;
+    border-radius: 50px;
+    background-color: #E9E9E9;
+    margin-bottom: 20px;
+}
+
+.idp-basic-text{
+    color: #1D1D1D;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 15px;
+}
+
+
+.learn-more-btn {
+    width: 164px;
+    height: 38px;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 11px 35px;
+    border-radius: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #E2231A;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*WEB DEVELOPMENT SECTION*/
+.section-web-dev {
+    margin-bottom: 50px;
+    position: relative; 
+    /* background-image: url('../images/background1.png');  */
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+/* .web-dev-p {
+    position: relative; 
+    background-image: url('../images/background1.png'); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 20px; 
+} */
+
+.basic-text-p {
+    font-size: 16px;
+    color: black;
+}
+
+.web-dev-title{
+    font-size: 15px;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+
+/*GRAPHIC DESIGN SECTION*/
+.section-graphic-design {
+    position: relative; 
+    /* background-image: url('../images/background2.png');  */
+    background-size: cover; 
+    background-position: center; 
+    padding: 20px;    
+}
+
+.graphic-design-title{
+    font-size: 15px;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.graphic-mobile {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    justify-content: center;
+}
+
+/*MOTION DESIGN*/
+.section-motion-design {
+    margin-bottom: 50px;
+    position: relative; 
+    /* background-image: url('../images/background1.png');  */
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+
+.basic-text-p {
+    font-size: 16px;
+    color: black;
+}
+
+.motion-design-title{
+    font-size: 15px;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 30px;
+}
