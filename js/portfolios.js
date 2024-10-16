@@ -301,16 +301,25 @@ const portfolios = [
 
 ];
 
-const portfolioSection = document.querySelector('.section-portfolio');
+const itemsPerPage = 9; 
+let currentPage = 1; 
+const totalItems = portfolios.length; 
+const totalPages = Math.ceil(totalItems / itemsPerPage); 
+
 const portfolioContainer = document.getElementById('portfolioContainer');
 const searchBar = document.getElementById('searchBar');
+const paginationInfo = document.getElementById('paginationNumbers'); 
 
 function createPortfolios(filteredPortfolios) {
+    portfolioContainer.innerHTML = ''; 
 
-    portfolioContainer.innerHTML = '';
+ 
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = Math.min(start + itemsPerPage, filteredPortfolios.length);
 
-    filteredPortfolios.forEach(({name, link}) =>{
-        //create container for portfolio 
+    for (let i = start; i < end; i++) {
+        const { name, link } = filteredPortfolios[i];
+
         const container = document.createElement('div');
         container.classList.add('portfolio-container');
 
@@ -323,34 +332,62 @@ function createPortfolios(filteredPortfolios) {
 
         const portfolioName = document.createElement('p');
         portfolioName.classList.add('portfolio-name');
-        portfolioName.textContent  = name;
+        portfolioName.textContent = name;
 
-        const portfolioLink = document.createElement('a');
-        portfolioLink.classList.add('portfolio-link');
-        portfolioLink.textContent = link;
+        portfolioName.addEventListener('click', () => {
+            window.open(link, '_blank');
+        });
 
         container.appendChild(image);
-        portfolioInfo.appendChild(portfolioName);  
-        portfolioInfo.appendChild(portfolioLink);  
-        container.appendChild(portfolioInfo);     
-        
+        portfolioInfo.appendChild(portfolioName);
+        container.appendChild(portfolioInfo);
+
         portfolioContainer.appendChild(container);
-    });
+    }
+
+    updatePaginationInfo(filteredPortfolios.length); 
 }
 
 function findPortfolios() {
     const searchTerm = searchBar.value.toLowerCase();
 
-
+   
     const filteredPortfolios = portfolios.filter(portfolio =>
         portfolio.name.toLowerCase().includes(searchTerm)
     );
 
+  
+    currentPage = 1;
+
+   
     createPortfolios(filteredPortfolios);
 }
 
+function updatePaginationInfo(filteredCount) {
+    const newTotalPages = Math.ceil(filteredCount / itemsPerPage); 
+    paginationInfo.textContent = `Page ${currentPage} of ${newTotalPages}`; 
+}
+
+// Button event listeners for pagination
+document.getElementById('prevBtn').addEventListener('click', function () {
+    if (currentPage > 1) {
+        currentPage--; 
+        createPortfolios(portfolios.filter(portfolio => 
+            portfolio.name.toLowerCase().includes(searchBar.value.toLowerCase())
+        ));
+    }
+});
+
+document.getElementById('nextBtn').addEventListener('click', function () {
+    const filteredPortfolios = portfolios.filter(portfolio => 
+        portfolio.name.toLowerCase().includes(searchBar.value.toLowerCase())
+    );
+
+    if (currentPage < Math.ceil(filteredPortfolios.length / itemsPerPage)) {
+        currentPage++;
+        createPortfolios(filteredPortfolios); 
+    }
+});
+
 createPortfolios(portfolios);
-
-searchBar.addEventListener("keyup", findPortfolios);
-
-
+searchBar.addEventListener("keyup", findPortfolios); 
