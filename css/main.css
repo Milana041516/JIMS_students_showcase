@@ -1162,8 +1162,8 @@ button {
 
 
 .web-dev-picture{
-    width: 64vh;
-    height: 40vh;
+    width: 55vh;
+    height: auto;
     background-image: url(../images/web-dev-picture.png);
     background-repeat: round;
 }
@@ -1172,7 +1172,7 @@ button {
 
 .web-dev-picture img{
     margin: 49px 0px 0 10px;
-    height: 80%;
+    height: 77%;
     max-width: 100%;
     border-radius: 0 0 20px 20px;
 }
