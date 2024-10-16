@@ -1,5 +1,5 @@
 //Video section
-// musr create an instance using JS to be able to customize
+
 const player = new Plyr('video');
 
 //burger-con
