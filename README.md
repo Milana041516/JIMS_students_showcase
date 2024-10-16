@@ -4,7 +4,7 @@ In this assignment students, in groups of 4, are responsible for designing and d
 
 The purpose of the website is to provide a platform for fellow students to display their skills, projects, and achievements to potential employers, industry professionals, and peers attending the event. Students will also incorporate information about the Interactive Media Design program, client projects, testimonials, and details about the Industry Night event
 
-![Webpage](images/readme-image.jpg)
+![Webpage](images/readme-banner.png)
 
 ## Installation
 This is no installatin required, but should be opened with live server.
